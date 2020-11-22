@@ -169,6 +169,10 @@ header {
     opacity: 0;
 }
 
+.card {
+    cursor: pointer;
+}
+
 .modal {
     background-color: white;
     width: 90%;
