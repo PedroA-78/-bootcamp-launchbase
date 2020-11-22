@@ -165,3 +165,86 @@ header {
 .modal_item_list li {
     margin: 8px 0;
 }
+
+/* === COMPANY_CONTAINER === */
+
+.company_container {
+    text-align: center;
+    margin-top: 48px;
+}
+
+/* === COMPANY_PROFILE === */
+
+.company_profile {
+    padding: 16px;
+    color: white;
+}
+
+.company_profile img {
+    height: 280px;
+    background-color: rgba(0, 0, 0, 1);
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 8px 2px black;
+}
+
+.company_profile h1 {
+    margin-top: 16px;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 8px black;
+}
+
+.company_profile p {
+    width: 400px;
+    margin: 16px auto 0;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.company_profile p a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    transition: all 200ms ease-in-out;
+}
+
+.company_profile p a:hover {
+    color: #4C2B99;
+    border-bottom: 1px solid #4C2B99;
+}
+
+.technologies_list {
+    margin-top: 8px;
+    list-style-type: none;
+}
+
+.technologies_list li {
+    margin: 4px;
+    font-size: 18px;
+}
+
+.company_social_networks {
+    margin-top: 24px;
+    list-style-type: none;
+}
+
+.company_social_networks li {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.company_social_networks li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+    transition: all 200ms ease-in-out;
+}
+
+.company_social_networks li a:hover {
+    color: #4C2B99;
+    border-bottom: 1px solid #4C2B99;
+}
