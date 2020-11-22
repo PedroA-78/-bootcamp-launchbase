@@ -2,6 +2,7 @@
 
 :root {
     --main-color: #50fa76;
+    --second-color: #7159c1;
 }
 
 * {
@@ -100,4 +101,57 @@ header {
 
 .profile_list li a {
     border-bottom: 1px solid var(--main-color);
+}
+
+/* === CLASSES_CONTAINER === */
+
+.classes_container {
+    margin-top: 32px;
+    text-align: center;
+    color: white;
+}
+
+.classes_container h1 {
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* === CARDS_CONTAINER === */
+
+.cards_container {
+    max-width: 800px;
+    margin: auto;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--second-color);
+}
+
+.card_image_container img {
+    width: 100%;
+}
+
+.card_content, 
+.card_info {
+    padding: 24px;
+}
+
+.card_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card_price {
+    background-color: var(--second-color);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
 }
