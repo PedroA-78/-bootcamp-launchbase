@@ -1,6 +1,5 @@
 const cardsCllNode = document.querySelectorAll(".card_challenges")
 const cardsModal = document.querySelectorAll(".card_modal")
-const closeButtons = document.querySelectorAll(".close_button")
 const modal = document.querySelector(".modal")
 
 let cards = Array.from(cardsCllNode)
@@ -14,9 +13,7 @@ for (let card of cards) {
     })
 }
 
-for (let closeButton of closeButtons) {
-    closeButton.addEventListener("click", function(){
-        modal.classList.remove("show_modal")
-        cardsModal[cardNum].classList.remove("card_show")
-    })
-}
+document.querySelector(".close_button").addEventListener("click", function(){
+    modal.classList.remove("show_modal")
+    cardsModal[cardNum].classList.remove("card_show")
+})
