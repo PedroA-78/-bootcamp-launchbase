@@ -1,0 +1,36 @@
+"npm init -y" // cria um arquivo que faz um "controle" e gerência todas as dependências do nosso projeto
+
+    /*
+        {
+            "name": "module_3",
+            "version": "1.0.0",
+            "description": "",
+            "main": "server.js",
+            "scripts": {
+                "start": "node server.js"
+            }
+        }
+    */
+
+"npm install express" // nos ajuda a criar o nosso próprio servidor
+
+    /*
+    {
+        "name": "module_3",
+        "version": "1.0.0",
+        "description": "",
+        "main": "server.js",
+        "scripts": {
+            "start": "node server.js"
+        },
+        "dependencies": {
+            "express": "^4.17.1"
+        }
+    }
+    */
+
+"npm start" // vai acessar o "package.json" e executar o arquivo que estiver setado no "start"
+
+"npm install -D nodemon" // Vai reinicar o nosso servidor sempre que tiver um alteração nos arquivos,
+// mas o (-D) torna essa uma dependência de desenvolvimento, para quando colocarmos online o projeto, 
+// essa dependência não ser executada
