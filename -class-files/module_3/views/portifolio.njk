@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="public/styles/style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul class="nav_list">
-                <li><a class="links" href="#">Sobre</a></li>
-                <li><a class="links" href="#">Aulas</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends "layout.html" %}
 
+{% block head %}
+    <title>Aulas - Mayk Brito</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+{% endblock %}
+
+{% block content %}
     <main>
         <section class="classes_container">
             <h1>Aulas</h1>
@@ -112,6 +103,5 @@
         </div>
     </main>
 
-    <script src="public/js/cards.js"></script>
-</body>
-</html>
+    <script src="/js/cards.js"></script>
+{% endblock %}

@@ -34,3 +34,42 @@
 "npm install -D nodemon" // Vai reinicar o nosso servidor sempre que tiver um alteração nos arquivos,
 // mas o (-D) torna essa uma dependência de desenvolvimento, para quando colocarmos online o projeto, 
 // essa dependência não ser executada
+
+    /*
+        {
+            "name": "module_3",
+            "version": "1.0.0",
+            "description": "",
+            "main": "server.js",
+            "scripts": {
+                "start": "nodemon server.js" // alteração no start
+            },
+            "dependencies": {
+                "express": "^4.17.1"
+            },
+            "devDependencies": {
+                "nodemon": "^2.0.6"
+            }
+        }
+    */
+
+"npm install nunjucks" // é uma template engine, para fazer reuso de códigos
+
+    /*
+        {
+            "name": "module_3",
+            "version": "1.0.0",
+            "description": "",
+            "main": "server.js",
+            "scripts": {
+                "start": "nodemon server.js"
+            },
+            "dependencies": {
+                "express": "^4.17.1",
+                "nunjucks": "^3.2.2"
+            },
+            "devDependencies": {
+                "nodemon": "^2.0.6"
+            }
+        }
+    */

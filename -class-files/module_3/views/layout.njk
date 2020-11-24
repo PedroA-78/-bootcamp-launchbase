@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% block head %}<title>Fred Flintstone</title>{% endblock %}
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav_list">
+                <li><a class="links" href="/">Sobre</a></li>
+                <li><a class="links" href="/portifolio">Aulas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+</body>
+</html>

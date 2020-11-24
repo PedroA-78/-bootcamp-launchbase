@@ -1,8 +1,23 @@
 const express = require('express') // O require é usado quando nós importamos um módulo de outro arquivo, seja uma função, string...
+const nunjucks = require('nunjucks') // Fazendo a requisição do nunjucks no nosso código
+
 const server = express() // Aqui a const express se tornou um função
 
-server.get("/", function(req, res){ // .get "é um método que vai pegar rota estipulada e executar uma função com parâmetro de request do usuario e um parâmetro de resposta do servidor" 
-    return res.send("Hello!") // .send é um método que envia a respostar para o request da interface http
+server.use(express.static('public'))  // .use é Middleware. Middleware é um bloco de código que é executado em todas as requisições ou nas que respeitam um certo padrão. E é respeitado a ordem de adição de cada um deles.
+
+server.set('view engine', 'njk') // .set é um método que define o valor da configuração especificado no primeiro parâmetro 
+
+nunjucks.configure('views', {
+    express: server,
+    noCache: true
+})
+
+server.get("/", function(req, res){ // .get "é um método que vai pegar rota estipulada e executar uma função com parâmetro de request do usuario e um parâmetro de resposta do servidor"
+    return res.render("about") // .render é um método usado para renderizar uma visualização e enviar a string HTML renderizada para o cliente.
+})
+
+server.get("/portifolio", function(req, res){
+    return res.render("portifolio")
 })
 
 server.listen(5000, function(){ // .listen é um método agora do (server) que vai ficar "ouvido algo e quando esse algo acontecer ele executa uma função de callback, ou seja vai executar algo"
