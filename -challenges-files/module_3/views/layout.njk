@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% block head %}
+    <title>Rocketseat</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/styles/style.css">
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="logo_container">
+            <a href="/"><img class="logo" src="/assets/logo.png"></a>
+        </div>
+        <nav>
+            <ul class="nav_list">
+                <li><a class="nav_links" href="/challenges">Desafios</a></li>
+                <li><a class="nav_links" href="/contents">Conteúdos</a></li>
+                <li><a class="nav_links" href="/about">Sobre</a></li>
+                <li><a class="nav_links" href="https://discordapp.com/invite/gCRAFhc">Comunidade</a></li>
+                <li><a class="nav_links" href="mailto:oi@rocketseat.com.br">Email</a></li>
+                <li><a class="nav_links" href="tel:+5547992078767">Telefone</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+    
+</body>
+</html>

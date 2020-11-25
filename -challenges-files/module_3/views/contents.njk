@@ -1,0 +1,68 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Rocketseat - Conteúdos</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <section class="cards_container">
+            <div class="cards">
+                <div class="card" id="dark-mode-com-css-mudando-a-aparencia-do-blog-de-maneira-simples-e-rapida">
+                    <div class="card_image_container">
+                        <img src="https://blog.rocketseat.com.br/content/images/2020/10/dark-mode-com-css-mudando-a-aparencia-do-blog-de-maneira-simples-e-rapida.jpg">
+                    </div>
+                    <div class="card_title">
+                        <h1>Dark Mode com CSS — mudando a aparência do Blog de maneira simples e rápida</h1>
+                    </div>
+                    <div class="card_info">
+                        <p class="card_author">por <a target="_blank" href="https://blog.rocketseat.com.br/author/thiago-marinho/">Thiago Marinho</a></p>
+                        <p class="card_time">3 min de leitura</p>
+                    </div>
+                </div>
+    
+                <div class="card" id="como-fazer-um-bom-readme">
+                    <div class="card_image_container">
+                        <img src="https://blog.rocketseat.com.br/content/images/2020/07/como-fazer-um-bom-readme-preview.png">
+                    </div>
+                    <div class="card_title">
+                        <h1>Como fazer um bom README</h1>
+                    </div>
+                    <div class="card_info">
+                        <p class="card_author">por <a target="_blank" href="https://blog.rocketseat.com.br/author/thiago-marinho/">Thiago Marinho</a></p>
+                        <p class="card_time">11 min de leitura</p>
+                    </div>
+                </div>
+    
+                <div class="card" id="iniciando-com-git-github">
+                    <div class="card_image_container">
+                        <img src="https://blog.rocketseat.com.br/content/images/2018/12/iniciando-com-git-github.jpg">
+                    </div>
+                    <div class="card_title">
+                        <h1>Git & Github: O que é? Por que? Como iniciar?</h1>
+                    </div>
+                    <div class="card_info">
+                        <p class="card_author">por <a target="_blank" href="https://blog.rocketseat.com.br/author/diego/">Diego Fernandes</a></p>
+                        <p class="card_time">5 min de leitura</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal_overlay">
+            <div class="modal_frame">
+                <span class="material-icons close_button">close</span>
+                <span class="max_button"></span>
+
+                <div class="modal_content">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/cards_content.js"></script>
+{% endblock %}
