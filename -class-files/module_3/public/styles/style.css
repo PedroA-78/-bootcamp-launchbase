@@ -132,6 +132,8 @@ header {
 
 .card {
     background-color: var(--second-color);
+    cursor: pointer;
+    display: grid;
 }
 
 .card_image_container img {
@@ -146,6 +148,7 @@ header {
 .card_info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .card_price {
@@ -167,10 +170,6 @@ header {
     left: 0;
     display: none;
     opacity: 0;
-}
-
-.card {
-    cursor: pointer;
 }
 
 .modal {

@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
     <title>Sobre - Fred Flintstone</title>
@@ -8,20 +8,20 @@
     <main>
         <section class="profile_container">
             <article class="people_profile">
-                <img src="/assets/fred_flintstone.png" alt="imagem do fred flintstone.">
-                <h1>Fred Flintstone</h1>
-                <h2>Operador de guindaste - Slate Rock and Gravel Company</h2>
-                <p>Fred é um típico operário, que trabalha como "operador de guindaste" na <a href="https://flintstones.fandom.com/wiki/Slate_Rock_and_Gravel_Company" target="_blank">Slate Rock and Gravel Company</a>.</p>
+                <img src="{{about.avatar_url}}" alt="imagem do fred flintstone.">
+                <h1>{{about.name}}</h1>
+                <h2>{{about.role}}</h2>
+                <p>{{about.description}}</p>
                 <ul class="profile_list">
+
+                    {% for link in about.links %}
+
                     <li>
-                        <a class="links" href="https://github.com/" target="_blank">GitHub</a>
+                        <a class="links" href="{{link.url}}" target="_blank">{{link.name}}</a>
                     </li>
-                    <li>
-                        <a class="links" href="https://www.instagram.com/" target="_blank">Instagram</a>
-                    </li>
-                    <li>
-                        <a class="links" href="https://twitter.com/" target="_blank">Twitter</a>
-                    </li>
+
+                    {% endfor %}
+
                 </ul>
             </article>
         </section>
