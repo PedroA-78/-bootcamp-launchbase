@@ -11,21 +11,15 @@
     <main>
         <section class="challenges_container">
             <div class="cards_challenges">
-                <div class="card_challenges">
-                    <h1>Desafio 2-1: Primeiro HTML</h1>
-                </div>
+
+                {% for title in titles%}
 
                 <div class="card_challenges">
-                    <h1>Desafio 2-2: Página de descrição</h1>
+                    <h1>{{title.title}}</h1>
                 </div>
 
-                <div class="card_challenges">
-                    <h1>Desafio 2-3: Página de posts e iframe</h1>
-                </div>
+                {% endfor %}
 
-                <div class="card_challenges">
-                    <h1>Desafio 3-1: Primeiro servidor</h1>
-                </div>
             </div>
         </section>
         
@@ -122,14 +116,19 @@
                             </li>
                         </ul>
                         <p>Dica: Para capturar essas requisições, basta adicionar esse trecho após todas as rotas no seu server.js:</p>
+                        <code class="modal_item_code">
+                            <span>server.use(function(req, res) {</span>
+                            <span>res.status(404).render("not-found");</span>
+                            <span>});</span>
+                        </code>
 
-<pre class="modal_item_code">
-<code>
-server.use(function(req, res) {
-res.status(404).render("not-found");
-});
-</code>
-</pre>
+                        <h2 class="modal_item_subtitle">Estilização</h2>
+                        <p>Você tem liberdade para escolher a estilização que preferir para esse desafio.</p>
+                    </div>
+
+                    <div class="card_modal">
+                        <h1 class="modal_item_title">Sobre o desafio</h1>
+                        <p>Nesse desafio você deve atualizar os arquivos com informações de cursos e descrição de forma dinâmica.</p>
 
                         <h2 class="modal_item_subtitle">Estilização</h2>
                         <p>Você tem liberdade para escolher a estilização que preferir para esse desafio.</p>
