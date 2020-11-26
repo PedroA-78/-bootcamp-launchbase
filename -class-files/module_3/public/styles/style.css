@@ -136,6 +136,10 @@ header {
     display: grid;
 }
 
+.true_featured.card_image_container {
+    position: relative;
+}
+
 .card_image_container img {
     width: 100%;
 }
@@ -157,6 +161,18 @@ header {
     padding: 5px 20px;
     border-radius: 20px;
     text-align: center;
+}
+
+/* === FEATURED === */
+
+.featured {
+    background-color: gold;
+    color: black;
+    padding: 2px 8px;
+    border-radius: 18px;
+    position: absolute;
+    top: -11px;
+    left: 11px;
 }
 
 /* === MODAL_OVERLAY === */
