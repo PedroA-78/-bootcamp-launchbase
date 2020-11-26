@@ -35,6 +35,20 @@ server.get("/portifolio", function(req, res){
     return res.render("portifolio", {items: videos})
 })
 
+server.get("/video", function(req, res){
+    const id = req.query.id // .query é uma query string, que é uma string de consulta baseada em valores a parâmetros especificos
+
+    const video = videos.find(function(video){ // o método find(), sempre vao retornar o indice do primeiro elemeto que satisfaz a condição especificada
+        return video.id == id
+    })
+
+    if(!video){
+        return res.send("Video not found!")
+    }
+
+    return res.render("video", {item: video})
+})
+
 server.listen(5000, function(){ // .listen é um método agora do (server) que vai ficar "ouvido algo e quando esse algo acontecer ele executa uma função de callback, ou seja vai executar algo"
     console.log("server is running")
 })

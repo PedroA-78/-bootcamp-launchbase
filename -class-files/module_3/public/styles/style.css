@@ -234,3 +234,61 @@ iframe {
     position: absolute;
     top: 5%;
 }
+
+/* === VIDEO(Page) === */
+
+.video_title_container {
+    max-width: 500px;
+    margin: 32px auto;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+}
+
+.video_container {
+    max-width: 800px;
+    margin: 32px auto;
+}
+
+.card_video_container {
+    position: relative;
+    height: 500px;
+}
+
+.card_video_container iframe {
+    position: absolute;
+    top: 0;
+}
+
+.card_video_container .featured {
+    top: -16px;
+    left: 8px;
+}
+
+.card_video_content p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card_video_info {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.card_video_price {
+    background-color: white;
+    color: var(--second-color);
+    border-radius: 16px;
+    font-weight: 700;
+    width: 200px;
+    margin: 0 auto;
+}
