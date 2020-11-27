@@ -166,7 +166,7 @@ header {
     display: block;
 }
 
-.modal_item_code span:nth-child(2) {
+.middle_item_code {
     margin-left: 16px;
 }
 
@@ -467,4 +467,12 @@ iframe {
 
 .not_found_container h2 {
     text-transform: uppercase;
+}
+
+/* === POST(Page) === */
+
+.iframe_container {
+    width: 100%;
+    height: calc(100vh - 124px);
+    position: relative;
 }

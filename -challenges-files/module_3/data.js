@@ -37,5 +37,8 @@ module.exports.challenges = [
     },
     {
         title: "Desafio 3-2: Arquivos nunjucks e dados dinâmicos"
+    },
+    {
+        title: "Desafio 3-3: Página de descrição do curso"
     }
 ]

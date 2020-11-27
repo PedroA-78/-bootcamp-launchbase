@@ -118,7 +118,7 @@
                         <p>Dica: Para capturar essas requisições, basta adicionar esse trecho após todas as rotas no seu server.js:</p>
                         <code class="modal_item_code">
                             <span>server.use(function(req, res) {</span>
-                            <span>res.status(404).render("not-found");</span>
+                            <span class="middle_item_code">res.status(404).render("not-found");</span>
                             <span>});</span>
                         </code>
 
@@ -129,6 +129,35 @@
                     <div class="card_modal">
                         <h1 class="modal_item_title">Sobre o desafio</h1>
                         <p>Nesse desafio você deve atualizar os arquivos com informações de cursos e descrição de forma dinâmica.</p>
+
+                        <h2 class="modal_item_subtitle">Estilização</h2>
+                        <p>Você tem liberdade para escolher a estilização que preferir para esse desafio.</p>
+                    </div>
+
+                     <div class="card_modal">
+                        <h1 class="modal_item_title">Sobre o desafio</h1>
+                        <p>Nesse desafio você deve criar uma página de descrição do curso que deve ser chamada no lugar da modal quando o usuário clicar no card do curso.</p>
+
+                        <h2 class="modal_item_subtitle">Rota</h2>
+                        <p>A rota também será a /courses, porém o id do curso será passado via route params (ex.: /courses/id_do_curso). Dica: utilize o req.params para recuperar o id fornecido na rota.</p>
+                        <code class="modal_item_code">
+                            <span>server.get("/courses/:id", function(req, res) {</span>
+                            <span class="middle_item_code">const id = req.params.id;</span>
+                            <span class="middle_item_code">return res.send(`O id fornecido na rota é: ${id}`);</span>
+                            <span>});</span>
+                            
+                        </code>
+
+                        <h2 class="modal_item_subtitle">Informações</h2>
+                        <ul class="modal_item_list">
+                            <li>Layout padrão</li>
+                            <li>Card do curso</li>
+                            <li>Link que redireciona para a página do curso</li>
+                        </ul>
+
+                        <h2 class="modal_item_subtitle">Fórum</h2>
+                        <p>Se houver mais dúvida sobre o desafio, essa thread no fórum poderá ser útil para você <g-emoji class="g-emoji" alias="purple_heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f49c.png">💜</g-emoji>
+                        <a href="https://app.rocketseat.com.br/h/forum/launchbase/07c66e6d-06ff-4cfb-baf2-b5b27be6ac8b" rel="nofollow">https://app.rocketseat.com.br/h/forum/launchbase/07c66e6d-06ff-4cfb-baf2-b5b27be6ac8b</a></p>
 
                         <h2 class="modal_item_subtitle">Estilização</h2>
                         <p>Você tem liberdade para escolher a estilização que preferir para esse desafio.</p>

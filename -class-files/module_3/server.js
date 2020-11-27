@@ -49,6 +49,6 @@ server.get("/video", function(req, res){
     return res.render("video", {item: video})
 })
 
-server.listen(5000, function(){ // .listen é um método agora do (server) que vai ficar "ouvido algo e quando esse algo acontecer ele executa uma função de callback, ou seja vai executar algo"
+server.listen(5050, function(){ // .listen é um método agora do (server) que vai ficar "ouvido algo e quando esse algo acontecer ele executa uma função de callback, ou seja vai executar algo"
     console.log("server is running")
 })
