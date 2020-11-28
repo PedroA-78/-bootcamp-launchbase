@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* === AVULSOS === */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header, main {
+    width: 80%;
+    margin: 32px auto;
+}
+
+/* === HEADER === */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.indexLink {
+    margin-right: 72px;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.navLinks {
+    margin: 0 16px;
+    font-size: 20px;
+    line-height: 30px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.focus {
+    font-weight: 700;
+}
+
+
+
+/* === INDEX(Page) === */
+
+/* === DESCRIPTION CONTAINER === */
+
+.descriptionContainer {
+    background-color: #FBDFDB;
+    padding: 64px 100px 0 ;
+    border-radius: 32px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.decription {
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.decription h1 {
+    font-size: 32px;
+}
+
+.decription p {
+    margin-top: 16px;
+    font-size: 20px;
+}
+
+.mascotContainer img {
+    display: block;
+    float: right;
+}
+
+/* === MOSTACCESSED CONTAINER === */
+
+.mostAccessed {
+    margin-top: 64px;
+}
+
+.mostAccessed h2 {
+    font-size: 28px;
+}
+
+/* === CARDS MOSTACCESSED === */
+
+.cards_MosAcc {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.card_MosAcc {
+    margin-top: 16px;
+}
+
+.thumbContainer_MosAcc img {
+    display: block;
+    width: 100%;
+    border-radius: 32px;
+}
+
+.cardInfo_MosAcc {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.recipeTitle_MosAcc {
+    font-size: 22px;
+}
+
+.recipeAuthor_MosAcc {
+    margin-top: 4px;
+    font-size: 18px;
+}
+
+.recipeAuthor_MosAcc span {
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+
+
+/* === ABOUT(Page) === */
+
+/* === ABOUT CONTAINER === */
+
+.aboutContainer h1 {
+    font-size: 32px;
+}
+
+.aboutContainer p {
+    margin-top: 16px;
+    font-size: 18px;
+}
+
+/* === HOW_IT_ALL_BEGAN CONTAINER === */
+
+.weStartedContainer {
+    margin-top: 32px;
+}
+
+.weStartedContainer h2 {
+    font-size: 28px;
+}
+
+.weStartedContainer p {
+    margin-top: 16px;
+    font-size: 18px;
+}
+
+/* OUR_RECIPES CONTAINER */
+
+.ourRecipesContainer {
+    margin-top: 32px;
+}
+
+.ourRecipesContainer h2 {
+    font-size: 28px;
+}
+
+.ourRecipesContainer p {
+    margin-top: 16px;
+    font-size: 18px;
+}
+
+
+
+/* === RECIPES(Page) === */
+
+/* === RECIPES CONTAINER === */
+
+/* === CARDS RECIPES === */
+
+.cards_RecCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.card_RecCont {
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.thumbContainer_RecCont img {
+    display: block;
+    width: 100%;
+    border-radius: 32px;
+}
+
+.cardInfo_RecCont {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.recipeTitle_RecCont {
+    font-size: 22px;
+}
+
+.recipeAuthor_RecCont {
+    margin-top: 4px;
+    font-size: 18px;
+}
+
+.recipeAuthor_RecCont span {
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+
+
+
+/* === RECIPE(Page) === */
+
+.thumbContainer {
+    width: 80%;
+    margin: auto;
+}
+
+.thumbContainer img {
+    width: 100%;
+    display: block;
+    border-radius: 32px;
+}
+
+.recipePrimaryInfos {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.recipeTitle {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.recipeAuthor {
+    margin-top: 4px;
+    color: #777;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.recipeAuthor span {
+    border-bottom: 1px solid #777;
+}
+
+.recipeSecondInfos {
+    margin-top: 16px;
+}
+
+.recipeIngredients h2 {
+    display: inline-block;
+    font-size: 28px;
+}
+
+.recipeIngredients span {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.ingredientsList {
+    overflow: hidden;
+    max-height: 1000px;
+    margin-top: 16px;
+    padding-left: 20px;
+    transition: all 300ms ease-in-out;
+}
+
+.ingredientsList li {
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.recipePreparationMode {
+    margin-top: 24px;
+}
+
+.recipePreparationMode h2 {
+    display: inline-block;
+    font-size: 28px;
+}
+
+.recipePreparationMode span {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.stepsList {
+    overflow: hidden;
+    max-height: 1000px;
+    margin-top: 16px;
+    padding-left: 20px;
+    transition: all 300ms ease-in-out;
+}
+
+.stepsList li {
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.recipeInformation {
+    margin-top: 24px;
+}
+
+.recipeInformation h2 {
+    display: inline-block;
+    font-size: 28px;
+}
+
+.recipeInformation span {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.addInfo {
+    overflow: hidden;
+    max-height: 1000px;
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 28px;
+    transition: all 300ms ease-in-out;
+}
+
+.unshow {
+    max-height: 0;
+    transition: all 300ms ease-in-out;
+}
+
+
+
+/* === MODAL === */
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    display: none;
+    opacity: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalOverlay.active {
+    display: flex;
+    animation: activated 300ms ease-in-out forwards;
+}
+
+@keyframes activated {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: flex;
+        opacity: 0;
+    }
+
+    100% {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.modal {
+    width: 40%;
+    /* height: 500px; */
+    border-radius: 32px 0 32px 32px;
+    background-color: white;
+
+    position: relative;
+}
+
+.closeButton {
+    background-color: salmon;
+    color: white;
+    font-size: 32px;
+    border-radius: 50%;
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    cursor: pointer;
+    transition: color 200ms ease-in-out;
+}
+
+.closeButton:hover {
+    color: black;
+}
+
+/* === MODAL CONTENT === */
+
+.modalContent {
+    padding: 40px;
+}
+
+.thumbContainer_ModCon img  {
+    width: 100%;
+    border-radius: 32px 0 32px 32px;
+}
+
+.cardInfo_ModCon {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.recipeTitle_ModCon {
+    font-size: 28px;
+}
+
+.recipeAuthor_ModCon {
+    margin-top: 4px;
+    font-size: 18px;
+}
+
+.recipeAuthor_ModCon span {
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+/* === FOOTER === */
+
+footer {
+    background-color: #bfbfbf;
+    padding: 16px 0;
+    margin-top: 128px;
+}
+
+footer p {
+    text-align: center;
+    font-weight: 700;
+    opacity: 0.4;
+}
