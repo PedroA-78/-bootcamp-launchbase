@@ -34,7 +34,13 @@ header {
     color: #777;
     font-size: 28px;
     line-height: 42px;
+    letter-spacing: 1px;
     position: relative;
+}
+
+.navLinks:hover {
+    color: var(--main-color);
+    transition: color 300ms ease-in-out;
 }
 
 .navLinks.active {
