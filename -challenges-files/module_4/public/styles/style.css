@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+    --main-color: #92E866;
+    --second-color: #62DE63;
+    --thid-color: #AFD266;
+}
+
+/* === AVULSOS === */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* === HEADER === */
+
+header {
+    width: 100%;
+    background-color: white;
+    padding: 24px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.navLinks {
+    text-decoration: none;
+    margin: 0 16px;
+    color: #777;
+    font-size: 28px;
+    line-height: 42px;
+    position: relative;
+}
+
+.navLinks.active {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.navLinks::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.navLinks:hover::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    transition: width 600ms ease-in-out;
+}
+
+.navLinks::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.navLinks:hover::after {
+    content: "";
+    width: 100%;
+    transition: width 600ms ease-in-out;
+}
