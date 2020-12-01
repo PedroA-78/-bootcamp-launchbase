@@ -1,0 +1,129 @@
+"npm init -y" // cria um arquivo que faz um "controle" e gerência todas as dependências do nosso projeto
+
+    /*
+        {
+            "name": "module_3",
+            "version": "1.0.0",
+            "description": "",
+            "main": "server.js",
+            "scripts": {
+                "start": "node server.js"
+            }
+        }
+    */
+
+"npm install express" // nos ajuda a criar o nosso próprio servidor
+
+    /*
+    {
+        "name": "module_3",
+        "version": "1.0.0",
+        "description": "",
+        "main": "server.js",
+        "scripts": {
+            "start": "node server.js"
+        },
+        "dependencies": {
+            "express": "^4.17.1"
+        }
+    }
+    */
+
+"npm start" // vai acessar o "package.json" e executar o arquivo que estiver setado no "start"
+
+"npm install -D nodemon" // Vai reinicar o nosso servidor sempre que tiver um alteração nos arquivos,
+// mas o (-D) torna essa uma dependência de desenvolvimento, para quando colocarmos online o projeto, 
+// essa dependência não ser executada
+
+    /*
+        {
+            "name": "module_3",
+            "version": "1.0.0",
+            "description": "",
+            "main": "server.js",
+            "scripts": {
+                "start": "nodemon server.js" // alteração no start
+            },
+            "dependencies": {
+                "express": "^4.17.1"
+            },
+            "devDependencies": {
+                "nodemon": "^2.0.6"
+            }
+        }
+    */
+
+"npm install nunjucks" // é uma template engine, para fazer reuso de códigos
+
+    /*
+        {
+            "name": "module_3",
+            "version": "1.0.0",
+            "description": "",
+            "main": "server.js",
+            "scripts": {
+                "start": "nodemon server.js"
+            },
+            "dependencies": {
+                "express": "^4.17.1",
+                "nunjucks": "^3.2.2"
+            },
+            "devDependencies": {
+                "nodemon": "^2.0.6"
+            }
+        }
+    */
+
+/* === New Project === */
+
+"npm instal -D browser-sync" // Fará o reload automatico da página quando algum arquivo for alterado
+
+    /*
+        {
+            "name": "module_4",
+            "version": "1.0.0",
+            "description": "",
+            "main": "server.js",
+            "scripts": {
+                "start": "nodemon server.js",
+                "browsersync": "browser-sync start --proxy http://localhost:5050 --files 'public, views'" 
+                // Essa é configuração do browsersync sendo feita através de um proxy, ou seja ele vai intercepta o arquivo antes de chegar no servidor, e ele está observando a pasta public e views inteira, então toda vez que ele interceptar um alteração em arquivos dessas duas pastas ele vai dar reload na página. 
+            },
+            "dependencies": {
+                "express": "^4.17.1",
+                "nunjucks": "^3.2.2"
+            },
+            "devDependencies": {
+                "browser-sync": "^2.26.13",
+                "nodemon": "^2.0.6"
+            }
+        }
+
+    */
+
+"npm instal -D npm-run-all" // Fará com que tanto o nodemon quanto o browsersync rode ao mesmo tempo
+
+    /*
+        {
+            "name": "module_4",
+            "version": "1.0.0",
+            "description": "",
+            "main": "server.js",
+            "scripts": {
+                "start": "npm-run-all -p nodemon browsersync",
+                // Essa é a configuração do npm-run-all, o '-p', quer dizer para rodar em paralelo as próxima configurações no caso o nodemon e o browsersync
+                "nodemon": "nodemon server.js",
+                "browsersync": "browser-sync start --proxy http://localhost:5050 --files 'public, views'"  
+            },
+            "dependencies": {
+                "express": "^4.17.1",
+                "nunjucks": "^3.2.2"
+            },
+            "devDependencies": {
+                "browser-sync": "^2.26.13",
+                "nodemon": "^2.0.6",
+                "npm-run-all": "^4.1.5"
+            }
+        }
+
+    */
