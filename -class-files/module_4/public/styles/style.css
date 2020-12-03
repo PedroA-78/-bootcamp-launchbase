@@ -2,6 +2,7 @@
 
 :root {
     --main-color: #7159c1;
+    --second-color: #f7df1e;
 }
 
 /* === AVULSOS === */
@@ -69,7 +70,7 @@ header {
 .card {
     background-color: white;
     width: 800px;
-    height: 400px;
+    min-height: 400px;
     margin: 45px auto;
 
     display: grid;
@@ -102,4 +103,105 @@ header {
     background-position: center center;
     width: 100%;
     height: 100%;
+}
+
+/* === DETAILS === */
+
+.details {
+    padding: 32px;
+}
+
+.details h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.items {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+
+.items:last-child {
+    border: none;
+}
+
+.items h3 {
+   font-size: 14px;
+   line-height: 24px;
+   color: #777;
+   letter-spacing: 0.7px;
+   font-weight: normal;
+}
+
+.items p {
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.follows span {
+    padding: 8px 16px;
+    background-color: var(--second-color);
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* === CREATE === */
+
+.lblItem {
+    font-size: 18px;
+    line-height: 28px;
+    color: #777;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+    display: block;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type="radio"] {
+    width: initial;
+    margin-right: 4px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.lblGender {
+    padding: 8px 16px;
+    background-color: var(--second-color);
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+button[type="submit"] {
+    padding: 8px 32px;
+    color: white;
+    font-size: 16px;
+    background-color: var(--main-color);
+    border-radius: 4px;
+    margin-top: 16px;
+    width: 100%;
 }

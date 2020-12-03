@@ -1,0 +1,47 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>Gym Manager - Instructors</title>
+{% endblock head %}
+
+{% block content %}
+    <main>
+        <form class="card" method="POST" action="/instructors">
+        {# method="POST" é usado ppor convernção para a criação de dados
+        já o action, se refere para onde os dados vão ser enviados. #}
+            <section class="avatar"></section>
+            <section class="details">
+                <h2>Novo instrutor</h2>
+                <div class="items">
+                    <label class="lblItem" for="avatar_url">Avatar URL</label>
+                    <input type="url" name="avatar_url" id="avatar_url" placeholder="https://">
+                </div>
+
+                <div class="items">
+                    <label class="lblItem" for="name">Instructor</label>
+                    <input type="text" name="name" id="name" placeholder="Nome do instrutor">
+                </div>
+
+                <div class="items">
+                    <label class="lblItem" for="birth">Data de nascimento</label>
+                    <input type="date" name="birth" id="birth">
+                </div>
+
+                <div class="items">
+                    <label class="lblItem">Sexo</label>
+                    
+                    <label class="lblGender" for="male"><input type="radio" name="gender" id="male" value="M" checked>Masculino</label>
+                    
+                    <label class="lblGender" for="female"><input type="radio" name="gender" id="female" value="F">Feminino</label>
+                </div>
+
+                <div class="items">
+                    <label class="lblItem" for="services">Área de atuação</label>
+                    <input type="text" name="services" id="services" placeholder="Separe os serviços prestados por vírgula">
+                </div>
+
+                <button type="submit">Cadastrar</button>
+            </section>
+        </form>
+    </main>
+{% endblock content %}

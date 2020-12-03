@@ -9,6 +9,15 @@ routes.get("/instructors", function(req, res){
     return res.render("instructors/index")
 })
 
+routes.get("/instructors/create", function(req, res){
+    return res.render("instructors/create")
+})
+
+routes.post("/instructors", function(req, res){
+    // Aqui nós definimos o caminho que o post deve tomar
+    return res.send("recebido")
+})
+
 routes.get("/members", function(req, res){
     return res.render("members")
 })
