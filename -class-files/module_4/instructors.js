@@ -16,10 +16,22 @@ exports.post = function(req, res){
         }
     }
 
-    req.body.birth = Date.parse(req.body.birth) // .parse transforma uma data padrão em timestamp
-    req.body.created_at = Date.now()
+    let {avatar_url, birth, name, services, gender} = req.body
 
-    data.instructors.push(req.body)
+    birth = Date.parse(birth) // .parse transforma uma data padrão em timestamp
+    const created_at = Date.now()
+    const id = Number(data.instructors.length + 1)
+
+
+    data.instructors.push({
+        id,
+        avatar_url,
+        name,
+        gender,
+        birth,
+        services,
+        created_at
+    })
 
     fs.writeFile("data.json", JSON.stringify(data, null, 4), function(err){
         // .writeFile é um método para gravar algo em um arquivo os parâmetros são (o caminho do arquivo onde vai ser gravado, os dados, e opcionalmente uma callback function)
