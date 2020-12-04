@@ -1,0 +1,61 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>Teachers</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <form method="POST" action="/teachers" class="teacherProfile">
+        <div class="avatar"></div>
+        <div class="details">
+            <h2>Detalhes</h2>
+            <div class="items">
+                <label class="lblItem" for="avatar_url">Avatar URL</label>
+                <input type="url" name="avatar_url" id="avatar_url" placeholder="https://">
+            </div>
+
+            <div class="items">
+                <label class="lblItem" for="name">Nome</label>
+                <input type="text" name="name" id="name" placeholder="Nome do professor">
+            </div>
+
+            <div class="items">
+                <label class="lblItem" for="birth">Data de nascimento</label>
+                <input type="date" name="birth" id="birth">
+            </div>
+
+            <div class="items">
+                <label class="lblItem" for="schooling">Grau de escolaridade</label>
+                <select name="schooling" id="schooling">
+                    <option value="Graduação">Graduação</option>
+                    <option value="Pós-graduação">Pós-graduação</option>
+                    <option value="Mestrado">Mestrado</option>
+                    <option value="Pós-Doutorado">Pós-Doutorado</option>
+                </select>
+            </div>
+
+            <div class="items">
+                <label class="lblItem">Modalidade</label>
+                
+                <label class="lblModality" for="presencial">
+                    <input type="radio" name="modality" id="presencial" value="Presencial" checked>
+                    Presencial
+                </label>
+
+                <label class="lblModality" for="ead">
+                    <input type="radio" name="modality" id="ead" value="EAD">
+                    EAD
+                </label>
+            </div>
+
+            <div class="items">
+                <label class="lblItem" for="subject">Disciplina</label>
+                <input type="text" name="subject" id="subject" placeholder="Separe as disciplinas ministradas por vírgula">
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
+</main>
+{% endblock content %}
