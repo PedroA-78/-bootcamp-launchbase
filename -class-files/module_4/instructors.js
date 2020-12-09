@@ -48,6 +48,29 @@ exports.post = function(req, res){
     // return res.send(req.body)
 }
 
+// Show 
+
+exports.show = function(req, res){
+    const {id} = req.params
+
+    const foundInstructors = data.instructors.find(function(instructor){
+        return instructor.id == id
+    })
+
+    if (!foundInstructors) {
+        return res.send("Instructor not found!")
+    }
+
+    const instructor = {
+        ...foundInstructors,
+        age: "",
+        services: foundInstructors.services.split(","),
+        created_at: ""
+    }
+
+    return res.render("instructors/show", {instructor})
+}
+
 // Update
 
 // Delete

@@ -1,0 +1,44 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>Gym Manager - {{instructor.name}}</title>
+{% endblock head %}
+
+{% block content %}
+    <main>
+        <div class="card">
+            <section class="avatar" style='background-image: url("{{instructor.avatar_url}}");'></section>
+            <section class="details">
+                <h2>Detalhes</h2>
+                <div class="items">
+                    <h3>Instructor</h3>
+                    <p>{{instructor.name}}</p>
+                </div>
+
+                <div class="items">
+                    <h3>Idade</h3>
+                    <p>{{instructor.birth}}</p>
+                </div>
+
+                <div class="items">
+                    <h3>Sexo</h3>
+                    <p>{{"Masculino" if instructor.gender == "M" else "Feminino"}}</p>
+                </div>
+
+                <div class="items">
+                    <h3>Acompanhamento</h3>
+                    <div class="follows">
+                        {% for service in instructor.services %}
+                        <span>{{service}}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="items">
+                    <h3>Desde</h3>
+                    <p>{{instructor.created_at}}</p>
+                </div>
+            </section>
+        </div>
+    </main>
+{% endblock content %}

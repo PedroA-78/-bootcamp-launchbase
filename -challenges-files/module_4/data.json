@@ -9,36 +9,6 @@
             "modality": "Presencial",
             "subject": "dfasdf, dfasffsdfsd",
             "created_at": 1607080319072
-        },
-        {
-            "id": 2,
-            "avatar_url": "https://asdfasdfasdfasd.com",
-            "name": "sdfgfdg",
-            "birth": -27080352000000,
-            "schooling": "Pós-graduação",
-            "modality": "EAD",
-            "subject": "dfasdf, dfasffsdfsd",
-            "created_at": 1607080347434
-        },
-        {
-            "id": 3,
-            "avatar_url": "https://asdfasdfasdfasd.com",
-            "name": "sdfgfdg",
-            "birth": -27080352000000,
-            "schooling": "Pós-graduação",
-            "modality": "Presencial",
-            "subject": "dfasdf, dfasffsdfsd",
-            "created_at": 1607080550106
-        },
-        {
-            "id": 4,
-            "avatar_url": "https://asdfasdfasdfasd.com",
-            "name": "sdfgfdg",
-            "birth": -27080352000000,
-            "schooling": "Pós-graduação",
-            "modality": "Presencial",
-            "subject": "dfasdf, dfasffsdfsd",
-            "created_at": 1607080573310
         }
     ]
 }
