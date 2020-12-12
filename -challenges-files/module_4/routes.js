@@ -16,6 +16,10 @@ routes.get('/teachers/create', function(req, res){
 
 routes.post('/teachers', functions.post)
 
+routes.get('/teachers/:id', functions.show)
+
+routes.get('/teachers/:id/edit', functions.edit)
+
 routes.get('/students', function(req, res){
     return res.render('students/students')
 })

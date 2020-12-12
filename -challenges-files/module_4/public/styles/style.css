@@ -115,7 +115,7 @@ main {
 /* === TEACHER PROFILE > AVATAR === */
 
 .avatar {
-    background-image: url("https://source.unsplash.com/collection/332741/");
+    /* background-image: url("https://source.unsplash.com/collection/332741/"); */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -222,14 +222,43 @@ input[type="radio"] {
     font-weight: bold;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button {
     margin-top: 16px;
     width: 100%;
     border: none;
     padding: 12px;
     background-color: var(--second-color);
     color: #444;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+/* === SHOW === */
+
+.subjects {
+    display: inline-block;
+    background-color: var(--second-color);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #444;
+    margin-top: 8px;
+    margin-right: 8px;
+    padding: 8px 16px;
+    border-radius: 32px;
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+}
+
+.lblModality p {
+    font-size: 20px;
 }

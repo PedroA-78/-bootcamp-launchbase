@@ -2,10 +2,10 @@ module.exports.age = function (timestamp){
     const currentDate = new Date()
     const birth = new Date(timestamp) // Passando como parâmetro um timestamp fica disponível as opções de get and set para serem trabalhadas
 
-    let age = currentDate.getUTCFullYear() - birth.getUTCFullYear()
+    let age = currentDate.getFullYear() - birth.getUTCFullYear()
 
-    const month = currentDate.getUTCMonth() - birth.getUTCMonth()
-    if (month < 1 && currentDate.getUTCDate() < birth.getUTCDate()) {
+    const month = currentDate.getMonth() - birth.getUTCMonth()
+    if (month < 1 && currentDate.getDate() < birth.getUTCDate()) {
         age -= 1
     }
 
