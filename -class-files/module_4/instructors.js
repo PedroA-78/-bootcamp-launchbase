@@ -1,5 +1,6 @@
 const fs = require('fs') // Módulo do NodeJS para trabalhar com arquivos do sistema "File System"
 const data = require('./data.json')
+const utils = require('./utils')
 
 // Create
 
@@ -21,7 +22,6 @@ exports.post = function(req, res){
     birth = Date.parse(birth) // .parse transforma uma data padrão em timestamp
     const created_at = Date.now()
     const id = Number(data.instructors.length + 1)
-
 
     data.instructors.push({
         id,
@@ -61,16 +61,36 @@ exports.show = function(req, res){
         return res.send("Instructor not found!")
     }
 
+    const date = new Date(foundInstructors.created_at)
     const instructor = {
         ...foundInstructors,
-        age: "",
+        age: utils.age(foundInstructors.birth),
         services: foundInstructors.services.split(","),
-        created_at: ""
+        created_at: date.getUTCDate() + "/" + (date.getUTCMonth() + 1) + "/" + date.getUTCFullYear()
     }
 
     return res.render("instructors/show", {instructor})
 }
 
-// Update
+// edit
+
+exports.edit = function(req, res){
+    const {id} = req.params
+
+    const foundInstructors = data.instructors.find(function(instructors){
+        return instructors.id == id
+    })
+
+    if (!foundInstructors) {
+        return res.send("Instructor not found!")
+    }
+
+    const instructor = {
+        ...foundInstructors,
+        birth: utils.date(foundInstructors.birth)
+    }
+
+    return res.render("instructors/edit", {instructor})
+}
 
 // Delete
