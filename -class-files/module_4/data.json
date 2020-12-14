@@ -1,21 +1,21 @@
 {
     "instructors": [
         {
-            "id": 1,
+            "id": "1",
             "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-            "name": "sdfgfdg",
+            "name": "Pedro Aurelio Ramos",
             "gender": "M",
-            "birth": 976579200000,
-            "services": "fafasdf, fdgasgfsfdg",
+            "birth": 962409600000,
+            "services": "Musculação",
             "created_at": 1607714153801
         },
         {
-            "id": 2,
+            "id": "2",
             "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-            "name": "sdfgfdg",
-            "gender": "M",
-            "birth": 962409600000,
-            "services": "fafasdf, fdgasgfsfdg",
+            "name": "Juvana Magalhães Ramos",
+            "gender": "F",
+            "birth": 953683200000,
+            "services": "Crossfit",
             "created_at": 1607730603878
         }
     ]

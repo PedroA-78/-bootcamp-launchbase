@@ -6,17 +6,26 @@
 
 {% block content %}
     <main>
-        <form class="card" method="POST" action="/instructors">
+        <div class="card">
             <section class="avatar" style='background-image: url("https://source.unsplash.com/collection/3203326/500x500")'></section>
-            <section class="details">
-
-                <h2>Editar instrutor</h2>
-
-                {% include 'instructors/fields.njk' %}
-
-                <button type="submit">Salvar</button>
             
+            <section class="details">
+                <form method="POST" action="/instructors?_method=PUT">
+                    <h2>Editar instrutor</h2>
+
+                    {% include 'instructors/fields.njk' %}
+
+                    <input type="hidden" name="id" value="{{instructor.id}}">
+
+                    <button type="submit">Salvar</button>
+                </form>
+
+                <form class="form_delete" action="/instructors?_method=DELETE" method="post">
+                    <input type="hidden" name="id" value="{{instructor.id}}">
+
+                    <button type="submit">Deletar</button>
+                </form>
             </section>
-        </form>
+        </div>
     </main>
 {% endblock content %}
