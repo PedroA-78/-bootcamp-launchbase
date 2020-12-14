@@ -35,9 +35,12 @@
 
             <div class="items">
                 <label class="lblItem" for="subject">Disciplina</label>
-                {% for subject in teacher.subject %}
-                    <span class="subjects">{{subject}}</span>
-                {% endfor %}
+                <div class="subjects">
+                    {% for subject in teacher.subject %}
+                    <span>{{subject}}</span>
+                    {% endfor %}
+                </div>
+                
             </div>
 
             <div class="items">
