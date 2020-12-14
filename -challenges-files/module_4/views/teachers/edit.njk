@@ -6,15 +6,27 @@
 
 {% block content %}
 <main>
-    <form method="POST" action="/teachers" class="teacherProfile">
+    <div class="teacherProfile">
         <div class="avatar" style='background-image: url("{{teacher.avatar_url}}");'></div>
-        <div class="details">
-            <h2>Editar professor</h2>
-    
-            {% include 'teachers/fields.njk' %}
 
-            <button type="submit">Cadastrar</button>
+        <div class="details">
+            <form method="POST" action="/teachers?_method=PUT">
+                <h2>Editar professor</h2>
+    
+                {% include 'teachers/fields.njk' %}
+
+                <input type="hidden" name="id" value="{{teacher.id}}">
+
+                <button class="buttonsSub" type="submit">Salvar</button>
+            </form>
+
+            <form class="form_delete" method="post" action="/teachers?_method=DELETE">
+                <input type="hidden" name="id" value="{{teacher.id}}">
+
+                <button class="buttonsSub" type="submit">Deletar</button>
+            </form>
         </div>
-    </form>
+    </div>
+    
 </main>
 {% endblock content %}

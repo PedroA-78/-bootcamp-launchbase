@@ -2,33 +2,33 @@
     "teachers": [
         {
             "id": 1,
-            "avatar_url": "https://source.unsplash.com/collection/332741/",
-            "name": "Pandora Ramos",
-            "birth": 976579200000,
-            "schooling": "Graduação",
-            "modality": "Presencial",
-            "subject": "Química, Física",
-            "created_at": 1607738259628
-        },
-        {
-            "id": 2,
             "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-            "name": "Pedro A. Ramos",
+            "name": "Pedro Aurelio Ramos",
             "birth": 962409600000,
-            "schooling": "Pós-Doutorado",
+            "schooling": "Pós-graduação",
             "modality": "EAD",
             "subject": "Computação",
-            "created_at": 1607742215791
+            "created_at": 1607977870504
         },
         {
-            "id": 3,
+            "id": 6,
             "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-            "name": "Juvana Ramos",
+            "name": "Gyovana Magalhães Lima",
             "birth": 953683200000,
-            "schooling": "Pós-graduação",
+            "schooling": "Mestrado",
             "modality": "Presencial",
             "subject": "Confeitaria, Beleza",
-            "created_at": 1607961785518
+            "created_at": 1607977991624
+        },
+        {
+            "id": 7,
+            "avatar_url": "https://www.papeiseparede.com.br/6050-thickbox_default/papel-de-parede-quadriculado-cachorrinhos.jpg",
+            "name": "Pandora Magalhães Ramos",
+            "birth": 963705600000,
+            "schooling": "Pós-Doutorado",
+            "modality": "Presencial",
+            "subject": "Inteligência, Bagunça",
+            "created_at": 1607978092187
         }
     ]
 }

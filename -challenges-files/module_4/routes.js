@@ -20,6 +20,10 @@ routes.get('/teachers/:id', functions.show)
 
 routes.get('/teachers/:id/edit', functions.edit)
 
+routes.put('/teachers', functions.put)
+
+routes.delete('/teachers', functions.delete)
+
 routes.get('/students', function(req, res){
     return res.render('students/students')
 })
