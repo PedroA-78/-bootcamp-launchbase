@@ -6,43 +6,32 @@
 
 {% block content %}
 <main>
-    <section class="teacherProfile">
-        <div class="avatar" style="background-image: url('https://source.unsplash.com/collection/332741/');"></div>
-        <div class="details">
-            <h2>Detalhes</h2>
-            <div class="items">
-                <h3>Nome</h3>
-                <p>Alice Ramos</p>
-            </div>
-
-            <div class="items">
-                <h3>Idade</h3>
-                <p>19</p>
-            </div>
-
-            <div class="items">
-                <h3>Grau de escolaridade</h3>
-                <p>Doutorado</p>
-            </div>
-
-            <div class="items">
-                <h3>Modalidade</h3>
-                <p>EAD</p>
-            </div>
-
-            <div class="items">
-                <h3>Disciplina</h3>
-                <div class="subjects">
-                    <span>Português</span>
-                    <span>Inglês</span>
-                </div>
-            </div>
-
-            <div class="items">
-                <h3>Desde</h3>
-                <p>01/03/2020</p>
-            </div>
-        </div>
+    <section class="teacherProfile tableContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th>Professor</th>
+                    <th>Discipina</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for teacher in teacher %}
+                <tr>
+                    <td>
+                        <span style="background-image: url('{{teacher.avatar_url}}')"></span>
+                        {{teacher.name}}
+                    </td>
+                    <td>
+                        {% for sub in teacher.sub %}
+                        <span>{{sub}}</span>
+                        {% endfor %}
+                    </td>
+                    <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </section>
 </main>
 {% endblock content %}

@@ -274,3 +274,87 @@ a.button {
     float: left;
     margin: 16px 2%;
 }
+
+/* === INDEX TEACHERS === */
+
+.tableContainer {
+    display: block;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.tableContainer table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.tableContainer thead tr th {
+    text-align: center;
+    width: 40%;
+}
+
+.tableContainer thead tr th:last-child {
+    width: 20%;
+}
+
+th {
+    text-transform: uppercase;
+    color: #777;
+    font-size: 18px;
+}
+
+th, td {
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+tbody tr td:first-child {
+    text-align: unset;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tbody tr:last-child td {
+    border: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span {
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+    border: 2px solid white;
+}
+
+tbody tr td:last-child a {
+    background-color: var(--second-color);
+    padding: 4px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 32px;
+}
+
+tbody tr td:nth-child(2) span {
+    padding: 4px 8px;
+    background-color: var(--second-color);
+    border-radius: 16px;
+    color: white;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}

@@ -3,6 +3,17 @@ const { nextTick } = require('process')
 const data = require('./data.json')
 const utils = require('./utils')
 
+
+//Index
+
+exports.index = function(req, res){
+    for(let i = 0; i < data.teachers.length; i++){
+        data.teachers[i].sub = data.teachers[i].subject.split(", ")
+    }
+
+    return res.render('teachers/index', {teacher: data.teachers})
+}
+
 // Create
 
 exports.post = function(req, res){

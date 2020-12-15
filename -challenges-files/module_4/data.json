@@ -2,23 +2,30 @@
     "teachers": [
         {
             "id": 1,
-            "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+            "avatar_url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1909&q=80",
             "name": "Pedro Aurelio Ramos",
             "birth": 962409600000,
             "schooling": "Pós-graduação",
             "modality": "EAD",
             "subject": "Computação",
-            "created_at": 1607977870504
+            "created_at": 1607977870504,
+            "sub": [
+                "Computação"
+            ]
         },
         {
             "id": 6,
-            "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+            "avatar_url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
             "name": "Gyovana Magalhães Lima",
             "birth": 953683200000,
             "schooling": "Mestrado",
             "modality": "Presencial",
             "subject": "Confeitaria, Beleza",
-            "created_at": 1607977991624
+            "created_at": 1607977991624,
+            "sub": [
+                "Confeitaria",
+                "Beleza"
+            ]
         },
         {
             "id": 7,
@@ -28,7 +35,11 @@
             "schooling": "Pós-Doutorado",
             "modality": "Presencial",
             "subject": "Inteligência, Bagunça",
-            "created_at": 1607978092187
+            "created_at": 1607978092187,
+            "sub": [
+                "Inteligência",
+                "Bagunça"
+            ]
         }
     ]
 }
