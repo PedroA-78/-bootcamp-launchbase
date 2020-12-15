@@ -12,7 +12,7 @@ server.use(express.urlencoded({ // . urlencoded analisa as solicitações recebi
     // o parâmetro {extended} nos permite ler as informações passadas pelo method POST, semelhante a um arquivo JSON com codificação URL
 }))
 server.use(express.static('public'))
-server.use(methodOverride("_method"))
+server.use(methodOverride("_method")) // Reconhece quando existe uma query string _method e substitui na rota o tipo do método
 server.use(routes)
 
 nunjucks.configure('views', {

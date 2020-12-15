@@ -2,6 +2,16 @@ const fs = require('fs') // Módulo do NodeJS para trabalhar com arquivos do sis
 const data = require('./data.json')
 const utils = require('./utils')
 
+// Index
+
+exports.index = function(req, res){
+    for(let i = 0; i < data.instructors.length; i++){
+        data.instructors[i].service = data.instructors[i].services.split(", ")
+    }
+
+    return res.render("instructors/index", {instructor: data.instructors})
+}
+
 // Create
 
 exports.post = function(req, res){
@@ -114,7 +124,8 @@ exports.put = function(req, res){
     const instructor = {
         ...foundInstructor,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
     }
 
     data.instructors[index] = instructor
