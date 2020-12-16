@@ -1,6 +1,6 @@
 const fs = require('fs') // Módulo do NodeJS para trabalhar com arquivos do sistema "File System"
-const data = require('./data.json')
-const utils = require('./utils')
+const data = require('../data.json')
+const utils = require('../utils')
 
 // Index
 
@@ -110,7 +110,7 @@ exports.put = function(req, res){
 
     let index = 0
 
-    const foundInstructor = data.instructors.find(function(instructor, foundIndex){
+    const foundInstructor = data.instructors.find(function(member, foundIndex){
         if(instructor.id == id){
             index = foundIndex
             return true

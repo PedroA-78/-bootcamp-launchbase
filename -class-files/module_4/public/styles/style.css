@@ -270,7 +270,8 @@ tbody tr td:first-child span {
     border: 2px solid white;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table_container > a {
     background-color: var(--main-color);
     padding: 8px 16px;
     text-decoration: none;
@@ -279,13 +280,18 @@ tbody tr td:last-child a {
     border-radius: 6px;
 }
 
+.table_container > a {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
 .table_container thead tr th:last-child,
 td:last-child {
     text-align: center;
 }
 
 .table_container thead tr:first-child th {
-    width: 50%;
+    width: 65%;
 }
 
 tbody tr td:nth-child(2) span {
@@ -300,3 +306,40 @@ tbody tr td:nth-child(2) span {
     text-transform: uppercase;
     font-size: 12px;
 }
+
+
+
+/* === MEMBERS === */
+
+.members_services::placeholder {
+    font-size: 12px;
+}
+
+/* === MEMBERS/SHOW === */
+
+.blood span {
+    padding: 8px 16px;
+    background-color: var(--second-color);
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* === MEMBERS/EDIT === */
+
+.blood {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    color: #555;
+}
+
+/* === MEMBERS/INDEX === */
