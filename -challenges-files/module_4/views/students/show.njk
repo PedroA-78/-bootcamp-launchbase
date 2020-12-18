@@ -1,0 +1,47 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>Student - {{student.name}}</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <form method="POST" action="/students" class="teacherProfile">
+        <div class="avatar" style='background-image: url("{{student.avatar_url}}");'></div>
+        <div class="details">
+            <h2>Detalhes</h2>
+            <div class="items">
+                <label class="lblItem" for="name">Nome</label>
+                <p>{{student.name}}</p>
+            </div>           
+
+            <div class="items">
+                <label class="lblItem" for="schooling">Email</label>
+                <p>{{student.mail}}</p>
+            </div>
+
+            <div class="items">
+                <label class="lblItem" for="birth">Idade</label>
+                <p>{{student.age}}</p>
+            </div>
+
+            <div class="items">
+                <label class="lblItem">Ano escolar</label>
+                <div class="highlight">
+                    <p>{{student.grade}}</p>
+                </div>
+                
+            </div>
+
+            <div class="items">
+                <label class="lblItem">Carga horária semanal</label>
+                <div class="highlight">
+                    <p>{{student.workload}} horas</p>
+                </div>
+            </div>
+
+            <a href="{{student.id}}/edit" class="button">Editar</a>
+        </div>
+    </form>
+</main>
+{% endblock content %}

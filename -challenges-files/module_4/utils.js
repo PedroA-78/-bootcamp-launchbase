@@ -22,3 +22,36 @@ module.exports.date = function(timestamp){
 
     return `${year}-${month}-${day}`
 }
+
+module.exports.grade = function(grade){
+    let info = null
+
+    switch(grade) {
+        case "5EF":
+            info = "5° ano - ensino fundametal I"
+        break
+        case "6EF":
+            info = "6° ano - ensino fundametal II"
+        break
+        case "7EF":
+            info = "7° ano - ensino fundametal II"
+        break
+        case "8EF":
+            info = "8° ano - ensino fundametal II"
+        break
+        case "9EF":
+            info = "9° ano - ensino fundametal II"
+        break
+        case "1EM":
+            info = "1° ano - ensino médio"
+        break
+        case "2EM":
+            info = "2° ano - ensino médio"
+        break
+        case "3EM":
+            info = "3° ano - ensino médio"
+        break
+    }
+
+    return info
+}

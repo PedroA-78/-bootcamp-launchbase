@@ -1,7 +1,7 @@
 const fs = require('fs')
 const { nextTick } = require('process')
-const data = require('./data.json')
-const utils = require('./utils')
+const data = require('../data.json')
+const utils = require('../utils')
 
 
 //Index
