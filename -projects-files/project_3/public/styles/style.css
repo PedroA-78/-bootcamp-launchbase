@@ -241,3 +241,155 @@ main {
     font-weight: bold;
     border-bottom: 2px dotted #666;
 }
+
+/* === RECIPE === */
+
+/* === BANNER RECIPE === */
+
+.thumbRecipe img {
+    display: block;
+    width: 100%;
+    border-radius: 32px;
+}
+
+.infoRecipes {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.authorRecipe {
+    margin-top: 4px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #666;
+}
+
+.authorRecipe span {
+    border-bottom: 2px dotted #666;
+}
+
+/* === INGREDIENTS === */
+
+.ingredients {
+    margin-top: 24px;
+}
+
+.ingredients h3 {
+    font-size: 22px;
+    margin: 0 8px 8px 0;
+}
+
+.ingredients h3, 
+.btnIngredients {
+    display: inline-block;
+}
+
+.btnIngredients {
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.ingredientsList {
+    padding-inline-start: 16px;
+    animation: show 600ms ease-in-out forwards;
+}
+
+.ingredientsList li {
+    margin: 8px 0;
+}
+
+.ingredientsList li:last-child {
+    margin-bottom: 0;
+}
+
+/* === PREPARE MODE === */
+
+.prepareMode {
+    margin-top: 24px;
+}
+
+.prepareMode h3 {
+    font-size: 22px;
+    margin: 0 8px 8px 0;
+}
+
+.prepareMode h3, 
+.btnPrepare {
+    display: inline-block;
+}
+
+.btnPrepare {
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.prepareList {
+    padding-inline-start: 16px;
+    animation: show 600ms ease-in-out forwards;
+}
+
+.prepareList li {
+    margin: 8px 0;
+}
+
+.prepareList li:last-child {
+    margin-bottom: 0;
+}
+
+/* === ADDITIONAL INFORMATION === */
+
+.addInfo {
+    margin-top: 24px;
+}
+
+.addInfo h3 {
+    font-size: 22px;
+    margin: 0 8px 8px 0;
+}
+
+.addInfo h3, 
+.btnInfo {
+    display: inline-block;
+}
+
+.btnInfo {
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.infoList {
+    text-align: justify;
+    line-height: 1.5em;
+    animation: show 600ms ease-in-out forwards;
+}
+
+/* === UNSHOW === */
+
+.unshow {
+    display: none;
+    opacity: 0;
+}
+
+/* === KEYFRAME SHOW === */
+
+@keyframes show {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+
+}
