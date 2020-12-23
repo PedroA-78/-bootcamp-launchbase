@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --back-color: #6558C3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* === INDEX === */
+
+/* === HEADER === */
+
+header {
+    background-color: black;
+}
+
+header nav {
+    width: 75%;
+    margin: auto;
+    padding: 8px 0;
+}
+
+header nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+/* === MAIN === */
+
+main {
+    width: 75%;
+    margin: auto;
+}
+
+/* === ALL RECIPES === */
+
+.allRecipes {
+    margin-top: 32px;
+}
+
+.allRecipes > a {
+    font-size: 0;
+    display: block;
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    background-color: var(--back-color);
+    border-radius: 50%;
+    transition: background 200ms ease-in-out;
+}
+
+.allRecipes > a:hover {
+    background-color: rgba(101, 88, 195, 0.9);
+}
+
+.allRecipes > a span {
+    color: white;
+    font-size: 48px;
+}
+
+.allRecipes > p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* === CARDS === */
+
+.cards {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    gap: 16px;
+}
+
+.thumb {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+}
+
+.infos {
+    display: grid; /*Faz os itens se alinharem horizontalmente*/
+}
+
+.title {
+    font-size: 18px;
+}
+
+.author {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.author span {
+    border-bottom: 2px dotted #666;
+}
+
+.toView {
+    display: grid;
+    align-items: center;
+    margin-top: 8px;
+    text-decoration: none;
+    color: var(--back-color);
+}
+
+/* === CREATE === */
+
+.createForm {
+    margin-top: 32px;
+}
+
+.createForm > p {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+button[type="submit"] {
+    float: right;
+    border: none;
+    color: white;
+    background-color: var(--back-color);
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.labelItem {
+    display: block;
+    margin-top: 22px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    margin-top: 8px;
+    height: 16px;
+    outline: none;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.newIngredient,
+.newStep {
+    border: none;
+    background-color: unset;
+    color: var(--back-color);
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    resize: none;
+    margin: 8px auto 40px;
+}
+
+/* === SHOW === */
+
+main > div {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+main > div p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+main > div span {
+    text-align: right;
+}
+
+main > div a {
+    color: white;
+    background-color: var(--back-color);
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+/* === BANNER RECIPE === */
+
+.bannerRecipe {
+    margin-top: 24px;
+
+}
+
+.thumbRecipe {
+    width: 100%;
+    height: 300px;
+    background-image: url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+.infoRecipes {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.authorRecipe {
+    margin-top: 4px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #666;
+}
+
+.authorRecipe span {
+    border-bottom: 2px dotted #666;
+}
+
+/* === INGREDIENTS === */
+
+.ingredientsCont {
+    margin-top: 24px;
+}
+
+.ingredientsCont h3 {
+    font-size: 22px;
+    margin: 0 8px 8px 0;
+}
+
+.ingredientsList {
+    padding-inline-start: 16px;
+    animation: show 600ms ease-in-out forwards;
+}
+
+.ingredientsList li {
+    margin: 8px 0;
+}
+
+.ingredientsList li:last-child {
+    margin-bottom: 0;
+}
+
+/* === PREPARE MODE === */
+
+.prepareMode {
+    margin-top: 24px;
+}
+
+.prepareMode h3 {
+    font-size: 22px;
+    margin: 0 8px 8px 0;
+}
+
+.prepareList {
+    padding-inline-start: 16px;
+    animation: show 600ms ease-in-out forwards;
+}
+
+.prepareList li {
+    margin: 8px 0;
+}
+
+.prepareList li:last-child {
+    margin-bottom: 0;
+}
+
+/* === ADDITIONAL INFORMATION === */
+
+.addInfo {
+    margin: 24px 0;
+}
+
+.addInfo h3 {
+    font-size: 22px;
+    margin: 0 8px 8px 0;
+}
+
+.infoList {
+    text-align: justify;
+    line-height: 1.5em;
+    word-wrap: break-word;
+    animation: show 600ms ease-in-out forwards;
+}
+
+/* === DELETE === */
+
+.deleteForm button {
+    margin-left: 8px;
+    background-color: salmon;
+}

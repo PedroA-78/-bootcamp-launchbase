@@ -1,0 +1,54 @@
+{% extends 'admin/layout.njk' %}
+
+{% block head %}
+<title>Foodfy - Editar</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <section class="details">
+        <form class="deleteForm" action="/admin/recipes?_method=DELETE" method="post">
+            <input type="hidden" name="id" value="{{recipe.id}}">
+
+            <button type="submit">Excluir</button>
+        </form>
+
+        <form class="createForm" action="/admin/recipes?_method=PUT" method="post">
+            <p>Editando receita</p>
+            <button type="submit">Salvar</button>
+
+            <label class="labelItem" for="image">Imagem da receita</label>
+            <input type="url" name="image" id="image" value="{{recipe.image}}" placeholder="https://">
+
+            <label class="labelItem" for="title">Título</label>
+            <input type="text" name="title" id="title" value="{{recipe.title}}" placeholder="Nome da receita">
+
+            <label class="labelItem" for="author">Autor</label>
+            <input type="text" name="author" id="author" value="{{recipe.author}}" placeholder="Nome do autor da receita">
+
+            <div class="ingredientsContainer">
+                <label class="labelItem" for="ingredients">Ingredientes</label>
+                {% for ingredient in recipe.ingredients %}
+                <input class="ingredients" type="text" name="ingredients[]" id="ingredients" value="{{ingredient}}" placeholder="Digite o ingrediente">
+                {% endfor %}
+            </div>
+            <button type="button" class="newIngredient">Adicionar novo ingredientes</button>
+
+            <div class="prepareContainer">
+                <label class="labelItem" for="preparation">Modo de preparo</label>
+                {% for step in recipe.preparation %}
+                <input class="preparation" type="text" name="preparation[]" id="preparation" value="{{step}}" placeholder="Digite a etapa de preparo">
+                {% endfor %}
+            </div>
+            <button type="button" class="newStep">Adicionar nova etapa</button>
+
+            <label class="labelItem" for="information">Informações adicionais</label>
+            <textarea name="information" id="information" cols="30" rows="10">{{recipe.information}}</textarea>
+
+            <input type="hidden" name="id" value="{{recipe.id}}">
+        </form>
+    </section>
+</main>
+
+<script src="/javascript/field.js"></script>
+{% endblock content %}

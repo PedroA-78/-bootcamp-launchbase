@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* === INDEX === */
+/* === HOME === */
 
 /* === HEADER === */
 
@@ -159,7 +159,7 @@ main {
     border-bottom: 2px dotted #666;
 }
 
-/* === MODAL === */
+/* === MODAL ===
 
 .modalOverlay {
     position: fixed;
@@ -240,7 +240,7 @@ main {
 .authorModal span {
     font-weight: bold;
     border-bottom: 2px dotted #666;
-}
+} */
 
 /* === RECIPE === */
 
