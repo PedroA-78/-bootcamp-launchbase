@@ -1,0 +1,56 @@
+<div class="items">
+    <label for="avatar_url" class="lblItem">Avatar URL</label>
+    <input type="url" name="avatar_url" id="avatar_url" placeholder="http://" value="{{member.avatar_url}}">
+</div>
+
+<div class="items">
+    <label for="name" class="lblItem">Member</label>
+    <input type="text" name="name" id="name"  placeholder="Member name" value="{{member.name}}">
+</div>
+
+<div class="items">
+    <label for="email" class="lblItem">Email</label>
+    <input type="email" name="email" id="email" value="{{member.email}}">
+</div>
+
+<div class="items">
+    <label for="birth" class="lblItem">Birth date</label>
+    <input type="date" name="birth" id="birth" value="{{member.birth}}">
+</div>
+
+<div class="items">
+    <label class="lblItem">Gender</label>
+    
+    <label for="male" class="lblGender">
+        <input type="radio" name="gender" id="male" value="M" checked>
+        Male
+    </label>
+    <label for="female" class="lblGender">
+        <input type="radio" name="gender" id="female" value="F" {% if member.gender == "F" %}checked{% endif %}>
+        Female
+    </label>
+</div>
+
+<div class="items">
+    <label for="blood" class="lblItem">Blood type</label>
+    <select class="blood" name="blood" id="blood">
+        <option value="A+" selected>A+</option>
+        <option value="A-" {% if member.blood == "A-" %}selected{% endif %}>A-</option>
+        <option value="B+" {% if member.blood == "B+" %}selected{% endif %}>B+</option>
+        <option value="B-" {% if member.blood == "B-" %}selected{% endif %}>B-</option>
+        <option value="AB+" {% if member.blood == "AB+" %}selected{% endif %}>AB+</option>
+        <option value="AB-" {% if member.blood == "AB-" %}selected{% endif %}>AB-</option>
+        <option value="O+" {% if member.blood == "O+" %}selected{% endif %}>O+</option>
+        <option value="O-" {% if member.blood == "O-" %}selected{% endif %}>O-</option>
+    </select>
+</div>
+
+<div class="items">
+    <label for="weight" class="lblItem">Weight (kg)</label>
+    <input type="number" name="weight" id="weight" value="{{member.weight}}">
+</div>
+
+<div class="items">
+    <label for="height" class="lblItem">Height (cm)</label>
+    <input type="number" name="height" id="height" value="{{member.height}}">
+</div>

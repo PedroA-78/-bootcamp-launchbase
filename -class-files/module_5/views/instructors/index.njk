@@ -1,0 +1,40 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+<title>Gym Manager - Instructors</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="card table_container">
+        <a href="/instructors/create">New</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Instructor</th>
+                    <th>Attendance</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for instructor in instructors %}
+                <tr>
+                    <td>
+                        <span style="background-image: url('{{instructor.avatar_url}}')"></span>
+                        {{instructor.name}}
+                    </td>
+                    <td>
+                        {% for service in instructor.services %}
+                        <span>{{service}}</span>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        <a href="/instructors/{{instructor.id}}">Show</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</main>
+{% endblock content %}

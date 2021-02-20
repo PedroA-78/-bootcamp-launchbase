@@ -111,7 +111,7 @@ exports.put = function(req, res){
     let index = 0
 
     const foundInstructor = data.instructors.find(function(member, foundIndex){
-        if(instructor.id == id){
+        if(member.id == id){
             index = foundIndex
             return true
         }

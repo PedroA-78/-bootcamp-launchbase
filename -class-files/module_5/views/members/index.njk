@@ -1,0 +1,38 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+<title>Gym Manager - Members</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="card table_container">
+        <a href="/members/create">New</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Member</th>
+                    <th>Email</th>
+                    <th>Weight</th>
+                    <th>Height</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for member in members %}
+                <tr>
+                    <td>
+                        <span style="background-image: url('{{member.avatar_url}}')"></span>
+                        {{member.name}}
+                    </td>
+                    <td>{{member.email}}</td>
+                    <td>{{member.weight}}</td>
+                    <td>{{member.height}}</td>
+                    <td><a href="/members/{{member.id}}">Show</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</main>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+<title>Gym Manager - {{instructor.name}}</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="card">
+        <section class="avatar" style="background-image: url('{{instructor.avatar_url}}')"></section>
+        <section class="details">
+            <form action="/instructors?_method=PUT" method="POST">
+                <h2>Instructor edit</h2>
+
+                {% include 'instructors/fields.njk'%}
+
+                <input type="hidden" name="id" value="{{instructor.id}}">
+
+                <button type="submit">Save</button>
+            </form>
+
+            <form class="form_delete" action="/instructors?_method=DELETE" method="POST">
+                <input type="hidden" name="id" value="{{instructor.id}}">
+
+                <button type="submit">Delete</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+{% include 'confirm.njk' %}
+
+{% endblock content %}

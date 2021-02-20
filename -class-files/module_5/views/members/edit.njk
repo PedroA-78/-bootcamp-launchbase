@@ -1,0 +1,33 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+<title>Gym Manager - {{member.name}}</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="card">
+        <section class="avatar" style="background-image: url('{{member.avatar_url}}')"></section>
+        <section class="details">
+            <form action="/members?_method=PUT" method="POST">
+                <h2>Member edit</h2>
+
+                {% include 'members/fields.njk'%}
+
+                <input type="hidden" name="id" value="{{member.id}}">
+
+                <button type="submit">Save</button>
+            </form>
+
+            <form action="/members?_method=DELETE" method="post" class="form_delete">
+                <input type="hidden" name="id" value={{member.id}}>
+
+                <button type="submit">Delete</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+{% include 'confirm.njk' %}
+
+{% endblock content %}

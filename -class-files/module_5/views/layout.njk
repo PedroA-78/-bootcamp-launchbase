@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% block head %}
+    <title>Gym Manager</title>
+    {% endblock head %}
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/instructors">Instructors</a>
+            <a href="/members">Members</a>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+
+    <script src="js/script.js"></script>
+</body>
+</html>

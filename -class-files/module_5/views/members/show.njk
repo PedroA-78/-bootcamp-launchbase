@@ -1,0 +1,46 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+<title>Gym Manager - {{member.name}}</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="card">
+        <section class="avatar" style="background-image: url('{{member.avatar_url}}')"></section>
+        <section class="details">
+            <h2>Details</h2>
+            <div class="items">
+                <h3>Member</h3>
+                <p>{{member.name}}</p>
+            </div>
+            <div class="items">
+                <h3>Email</h3>
+                <p>{{member.email}}</p>
+            </div>
+            <div class="items">
+                <h3>Age</h3>
+                <p>{{member.birth}}</p>
+            </div>
+            <div class="items">
+                <h3>Gender</h3>
+                <p>{{"Male" if member.gender == "M" else "Female"}}</p>
+            </div>
+            <div class="items">
+                <h3>Blood type</h3>
+                <p>{{member.blood}}</p>
+            </div>
+            <div class="items">
+                <h3>Weight</h3>
+                <p>{{member.weight}}kg</p>
+            </div>
+            <div class="items">
+                <h3>Height</h3>
+                <p>{{member.height}}cm</p>
+            </div>
+
+            <a href="/members/{{member.id}}/edit" class="button">Edit</a>
+        </section>
+    </div>
+</main>
+{% endblock content %}
