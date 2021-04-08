@@ -1,0 +1,43 @@
+<div class="items">
+    <label class="lblItem" for="avatar_url">Avatar URL</label>
+    <input type="url" name="avatar_url" id="avatar_url" value="{{teacher.avatar_url}}" placeholder="https://">
+</div>
+
+<div class="items">
+    <label class="lblItem" for="name">Nome</label>
+    <input type="text" name="name" id="name" value="{{teacher.name}}" placeholder="Nome do professor">
+</div>
+
+<div class="items">
+    <label class="lblItem" for="birth">Data de nascimento</label>
+    <input type="date" name="birth" id="birth" value="{{teacher.birth}}">
+</div>
+
+<div class="items">
+    <label class="lblItem" for="schooling">Grau de escolaridade</label>
+    <select name="schooling" id="schooling">
+        <option value="Graduação" {% if teacher.schooling == "Graduação" %}selected{% endif %}>Graduação</option>
+        <option value="Pós-graduação" {% if teacher.schooling == "Pós-graduação" %}selected{% endif %}>Pós-graduação</option>
+        <option value="Mestrado" {% if teacher.schooling == "Mestrado" %}selected{% endif %}>Mestrado</option>
+        <option value="Pós-Doutorado" {% if teacher.schooling == "Pós-Doutorado" %}selected{% endif %}>Pós-Doutorado</option>
+    </select>
+</div>
+
+<div class="items">
+    <label class="lblItem">Modalidade</label>
+    
+    <label class="lblModality" for="presencial">
+        <input type="radio" name="modality" id="presencial" value="Presencial" checked {% if teacher.modality == "Presencial" %}checked{% endif %}>
+        Presencial
+    </label>
+
+    <label class="lblModality" for="ead">
+        <input type="radio" name="modality" id="ead" value="EAD" {% if teacher.modality == "EAD" %}checked{% endif %}>
+        EAD
+    </label>
+</div>
+
+<div class="items">
+    <label class="lblItem" for="subject">Disciplina</label>
+    <input type="text" name="subject" id="subject" value="{{teacher.subject}}" placeholder="Separe as disciplinas ministradas por vírgula">
+</div>

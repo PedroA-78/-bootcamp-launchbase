@@ -1,0 +1,55 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>Teacher - {{teacher.name}}</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <form method="POST" action="/teachers" class="teacherProfile">
+        <div class="avatar" style='background-image: url("{{teacher.avatar_url}}");'></div>
+        <div class="details">
+            <h2>Detalhes</h2>
+            <div class="items">
+                <label class="lblItem" for="name">Nome</label>
+                <p>{{teacher.name}}</p>
+            </div>
+
+            <div class="items">
+                <label class="lblItem" for="birth">Idade</label>
+                <p>{{teacher.age}}</p>
+            </div>
+
+            <div class="items">
+                <label class="lblItem" for="schooling">Grau de escolaridade</label>
+                <p>{{teacher.schooling}}</p>
+            </div>
+
+            <div class="items">
+                <label class="lblItem">Modalidade</label>
+                
+                <label class="lblModality" for="presencial">
+                    <p>{{teacher.modality}}</p>
+                </label>
+            </div>
+
+            <div class="items">
+                <label class="lblItem" for="subject">Disciplina</label>
+                <div class="subjects">
+                    {% for subject in teacher.subject %}
+                    <span>{{subject}}</span>
+                    {% endfor %}
+                </div>
+                
+            </div>
+
+            <div class="items">
+                <label class="lblItem">Desde</label>
+                <p>{{teacher.created_at}}</p>
+            </div>
+
+            <a href="{{teacher.id}}/edit" class="button">Editar</a>
+        </div>
+    </form>
+</main>
+{% endblock content %}
