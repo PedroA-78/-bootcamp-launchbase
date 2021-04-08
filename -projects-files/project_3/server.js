@@ -21,6 +21,6 @@ nunjucks.configure('views', {
 })
 
 
-server.listen(5000, function(){
+server.listen(3030, function(){
     console.log("server is running")
 })
