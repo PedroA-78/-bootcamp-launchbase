@@ -1,8 +1,22 @@
-{% extends 'layout.njk' %}
+{% extends "layout.njk" %}
 
 {% block head %}
-<title>Gym Manager - New Instructor</title>
+<title>Gym Manager - Instructors</title>
 {% endblock head %}
 
 {% block content %}
+    <main>
+        <form class="card" method="POST" action="/instructors">
+        {# method="POST" é usado ppor convernção para a criação de dados
+        já o action, se refere para onde os dados vão ser enviados. #}
+            <section class="avatar" style='background-image: url("https://source.unsplash.com/collection/3203326/500x500")'></section>
+            <section class="details">
+                <h2>Novo instrutor</h2>
+                
+                {% include 'instructors/fields.njk' %}
+
+                <button type="submit">Cadastrar</button>
+            </section>
+        </form>
+    </main>
 {% endblock content %}
