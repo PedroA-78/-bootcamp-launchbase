@@ -4,7 +4,14 @@ const db = require('../config/db')
 // Index
 
 module.exports.index = function(req, res){
-    return res.render("instructors/index")
+    db.query(`select * from instructors`, function(err, results){
+        if (err) return res.send("Database error when selecting!")
+
+        for (item of results.rows){
+            item.services = item.services.split(", ")
+        }
+        return res.render("instructors/index", {instructors: results.rows})
+    })
 }
 
 // Post
@@ -41,7 +48,7 @@ module.exports.post = function(req, res){
 
     db.query(query, values, function(err, results){
         if (err){
-            return res.send("Database write error!")
+            return res.send("Database write error! " + err)
         }
         return res.redirect(`/instructors/${results.rows[0].id}`)
     })
@@ -50,7 +57,7 @@ module.exports.post = function(req, res){
 // Show
 
 module.exports.show = function(req, res){
-    return
+    return res.send("hello")
 }
 
 // Edit
